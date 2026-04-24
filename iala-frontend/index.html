@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intelligent Adaptive Learning Assistant</title>
+    <!-- Modern Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app" class="app-container">
+      
+      <!-- Left Sidebar: Student Profile Dashboard -->
+      <aside class="sidebar glass-panel">
+        <div class="sidebar-header">
+          <h1>IALA</h1>
+          <p class="subtitle">Socratic Mentor</p>
+        </div>
+        
+        <div class="profile-section">
+          <h3>Current Topic</h3>
+          <div class="concept-badge" id="current-concept">Initializing...</div>
+        </div>
+
+        <div class="profile-section">
+          <h3>Student Metrics</h3>
+          
+          <div class="metric">
+            <div class="metric-label">
+              <span>Mastery Level</span>
+              <span id="mastery-value">0%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="mastery-fill" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="metric">
+            <div class="metric-label">
+              <span>Engagement</span>
+              <span id="engagement-value">0%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="engagement-fill" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Area: Chat Interface -->
+      <main class="chat-container glass-panel">
+        <div class="chat-header">
+          <h2>Learning Session</h2>
+          <div id="status-indicator" class="status-indicator active"></div>
+        </div>
+
+        <div class="chat-history" id="chat-history">
+          <!-- Messages will be injected here via JS -->
+        </div>
+
+        <div class="chat-input-area">
+          <form id="chat-form" class="input-form">
+            <input 
+              type="text" 
+              id="user-input" 
+              placeholder="Type your response or ask a question..." 
+              autocomplete="off" 
+              disabled
+            />
+            <button type="submit" id="send-btn" class="glow-button" disabled>Send</button>
+          </form>
+        </div>
+      </main>
+
+    </div>
+    
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
