@@ -5,3 +5,4 @@ pydantic==2.4.2
 langchain
 langgraph
 langchain-core
+psycopg2-binary
